@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/client/client/pom.xml" />
+        <option value="$PROJECT_DIR$/server/server/pom.xml" />
+        <option value="$PROJECT_DIR$/weather/weather/pom.xml" />
+        <option value="$PROJECT_DIR$/config/pom.xml" />
+        <option value="$PROJECT_DIR$/couse/couse/pom.xml" />
+        <option value="$PROJECT_DIR$/subscription/subscription/pom.xml" />
+        <option value="$PROJECT_DIR$/course/course/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/gateway/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="openjdk-20 (WSL) (3)" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>
