@@ -1,12 +1,12 @@
 package com.example.gateway;
 
-import org.apache.log4j.Logger;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Logger;
 
 @Component
 public class LogFilter extends AbstractGatewayFilterFactory<LogFilter.Config> {
@@ -19,13 +19,17 @@ public class LogFilter extends AbstractGatewayFilterFactory<LogFilter.Config> {
     }
 
     @Override
-    public GatewayFilter apply(Config config){
+    public GatewayFilter apply(Config config) {
         return (exchange, chain) -> chain.filter(exchange).then(Mono.fromRunnable(() -> {
             log.info("TOTAL DE REQUESTS: " + COUNT_CALL_GATEWAY.incrementAndGet());
         }));
     }
 
     public static class Config {
-        //Put the configuration properties
+        static Logger log = Logger.getLogger(Config.class.getName());
+
+        static {
+            log.info("config iniciado");
+        }
     }
 }
